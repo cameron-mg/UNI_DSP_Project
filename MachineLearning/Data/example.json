@@ -1,0 +1,84 @@
+{
+    "status":"success",
+    "list":{
+       "id":"high-rental-demand",
+       "name":"High rental demand properties"
+    },
+    "postcode":"TQ10 9EX",
+    "radius":100,
+    "result_count":50,
+    "api_calls_cost":5,
+    "properties":[
+       {
+          "id":"Z64295973",
+          "address":"Elphinstone Road, Plymouth, Devon PL2",
+          "postcode":"PL2 3QQ",
+          "type":"Terraced house",
+          "bedrooms":3,
+          "price":245000,
+          "sqf":null,
+          "days_on_market":10,
+          "lat":"50.39385500",
+          "lng":"-4.15103600",
+          "distance_to":"15.13",
+          "url":"https://propertydata.co.uk/outbound/zoopla/64295973"
+       },
+       {
+          "id":"O13125606",
+          "address":"Trusham, Newton Abbot, TQ13",
+          "postcode":"TQ13 0NR",
+          "type":"Detached house",
+          "bedrooms":3,
+          "price":1100000,
+          "sqf":null,
+          "days_on_market":0,
+          "lat":"50.62899000",
+          "lng":"-3.62026000",
+          "distance_to":"16.81",
+          "url":"https://propertydata.co.uk/outbound/otm/13125606"
+       },
+       {
+          "id":"Z64356302",
+          "address":"Winslade Park Avenue, Clyst St. Mary, Exeter EX5",
+          "postcode":"EX5 1DA",
+          "type":"Detached house",
+          "bedrooms":2,
+          "price":450000,
+          "sqf":null,
+          "days_on_market":16,
+          "lat":"50.70853800",
+          "lng":"-3.45180500",
+          "distance_to":"25.50",
+          "url":"https://propertydata.co.uk/outbound/zoopla/64356302"
+       },
+       {
+          "id":"O13074844",
+          "address":"Tiverton EX16",
+          "postcode":"EX16 8NN",
+          "type":"Detached house",
+          "bedrooms":4,
+          "price":545000,
+          "sqf":null,
+          "days_on_market":12,
+          "lat":"50.91204000",
+          "lng":"-3.65182000",
+          "distance_to":"34.85",
+          "url":"https://propertydata.co.uk/outbound/otm/13074844"
+       },
+       {
+          "id":"O13057297",
+          "address":"3 Haseley Court, Ferndown Close, Taunton TA1 4TL",
+          "postcode":"TA1 4TL",
+          "type":"Flat",
+          "bedrooms":2,
+          "price":175000,
+          "sqf":null,
+          "days_on_market":19,
+          "lat":"51.00560000",
+          "lng":"-3.11887000",
+          "distance_to":"50.63",
+          "url":"https://propertydata.co.uk/outbound/otm/13057297"
+       }
+    ],
+    "process_time":"5.62"
+ }

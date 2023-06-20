@@ -1,0 +1,50 @@
+{% extends "provest/template.html" %}
+{% block title %}
+ProVest - Search Results
+{% endblock %}
+{% block content %}
+<br>
+<br>
+<div class="my-3 p-3 bg-body rounded shadow-sm">
+    <h2 class="border-bottom pb-3 mb-0">Search Results</h2>
+    <div class="my-3 p-3 bg-body rounded shadow-sm">
+        <h6 class="border-bottom pb-2 mb-0">Properties</h6>
+        <div class="d-flex text-muted pt-3">
+          <p class="pb-3 mb-0 small lh-sm border-bottom">
+          {% if properties %}
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>Postcode</th>
+                  <th>Property Type</th>
+                  <th>Bedrooms</th>
+                  <th>Current Price</th>
+                  <th>Days on Market</th>
+                </tr>
+              </thead>
+              <tbody>
+              {% for p in properties %}
+                  <tr>
+                      <td>{{ p.property.postcode }}</td>
+                      <td>{{ p.property.type }}</td>
+                      <td>{{ p.property.bedrooms }}</td>
+                      <td>{{ p.property.price }}</td>
+                      <td>{{ p.property.days_on_market }}</td>
+                      <td>
+                        <a href="{% url 'propdetails' p.property.id %}" class="btn btn-success me-2" role="button" aria-pressed="true">View Details</a>
+                      </td>
+                      <td>
+                        <a href="{{ p.property.url }}" class="btn btn-primary me-2" role="button" aria-pressed="true">View Sale Page</a>
+                      </td>
+                  </tr>
+              {% endfor %}
+              </tbody>
+            </table>
+          {% else %}
+            <p>No properties found.</p>
+          </p>
+          {% endif %}
+        </div>
+      </div>
+</div>
+{% endblock %}

@@ -1,0 +1,27 @@
+{% extends "provest/template.html" %}
+{% block title %}
+ProVest - Property Search
+{% endblock %}
+{% block content %}
+<br>
+<br>
+<div class="my-3 p-3 bg-body rounded shadow-sm">
+    <h2 class="border-bottom pb-2 mb-0">Property Search</h2>
+    <br>
+      {% if searched %}
+      <h5 class="border-bottom pb-4 mb-0">Found Properties</h5>
+      {% else %}
+      <h5 class="border-bottom pb-4 mb-0">Please enter a postcode to initiate search.</h5>
+      <p style="color:brown;">{{error}}</p>
+        <div class="d-flex text-muted pt-3">
+            <form method="post" class="form-group">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <button type="submit" class="btn btn-primary mb-2">Search</button>
+            </form>
+        </div>
+      <h6>Please allow up to a minute to process search!</h6>
+      {% endif %}
+      <br>
+</div>
+{% endblock %}

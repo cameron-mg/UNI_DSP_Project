@@ -1,0 +1,33 @@
+{% extends "provest/template.html" %}
+{% block title %}
+ProVest - Home
+{% endblock %}
+{% block content %}
+<div class="text-center">
+    <h1>Welcome to ProVest</h1>
+</div>
+<div class="container mt-3 text-center">
+    <h1>Welcome to ProVest - Property Investment Tool</h1>
+</div>
+<div class="my-3 p-3 bg-body rounded shadow-sm">
+    <h4 class="border-bottom pb-2 mb-2">How It Works</h4>
+    <h6>1. The Property Search tab at the top will be your main way to interact with the system.</h6>
+    <h6>2. You need to provide a postcode in the space provided on the search tab.</h6>
+    <h6>3. After clicking "search" the system will find properties in the search radius currently on the market.</h6>
+    <h6>4. The system will present the properties to you ordered by possible return on investment.</h6>
+    <h6>5. More details about the properties can be found by clicking on the "view details" button on each property returned.</h6>
+</div>
+<div class="my-3 p-3 bg-body rounded shadow-sm">
+    <h4 class="border-bottom pb-2 mb-2">How We Predict Future House Prices</h4>
+    <h6>- The machine learning model has been trained on all uk property transactions from 1995 until 2017.</h6>
+    <h6>- This data allows the model to predict the future price of a house based on various metrics such as postcode, property type and date of transfer.</h6>
+    <h6>- The model has been developed to a suitable degree of accuracy however can make mistakes and all predictions are only possibilities.</h6>
+</div>
+<div class="my-3 p-3 bg-body rounded shadow-sm">
+    <h4 class="border-bottom pb-2 mb-2">Real-Time Data</h4>
+    <h6>- The real-time property data is provided by PropertyDataUK.</h6>
+    <h6>- All properties found from the search will have a sale page accessible through a link displayed with the properties details.</h6>
+    <h6>- Documentation for the API can be found by pressing the button below.</h6>
+    <a href="https://propertydata.co.uk/" class="btn btn-primary" role="button" aria-pressed="true">Go To PropertyDataUK</a>   
+</div>
+{% endblock %}

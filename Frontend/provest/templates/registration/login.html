@@ -1,0 +1,16 @@
+{% extends "provest/template.html" %}
+{% block content %}
+<div class="d-flex">
+  <div class="col-6">
+    <h1>Login</h1>
+    <br>
+    <p style="color:brown;">{{error}}</p>
+    <form method="post" class="form-group">
+      {% csrf_token %}
+      {{ form.as_p }}
+      <button type="submit" class="btn btn-primary mb-2">Log In</button>
+    </form>
+  </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,56 @@
+{% extends "provest/template.html" %}
+{% block title %}
+ProVest - Property Details
+{% endblock %}
+{% block content %}
+<br>
+<br>
+<div class="my-3 p-3 bg-body rounded shadow-sm">
+    <h2 class="border-bottom pb-3 mb-0">Details for {{ property.property.address }}</h2>
+    <br>
+    <h4 class="border-bottom pb-2 mb-0">Property Details</h4>
+        <div class="my-3 p-3 bg-body rounded shadow-sm">
+            <h5 class="border-bottom pb-2 mb-0">Address Details</h5>
+            <h6>Address: {{ property.property.address }}</h6>  
+            <h6>Postcode: {{ property.property.postcode }}</h6>  
+            <h6>Property Type: {{ property.property.type }}</h6>   
+            <h6>Bedrooms: {{ property.property.bedrooms }}</h6>                
+            <h6>Days on Market: {{ property.property.days_on_market }}</h6> 
+            <a href="{{ property.property.url }}" class="btn btn-primary me-2" role="button" aria-pressed="true">View Sale Page</a>
+        </div>
+        <div class="my-3 p-3 bg-body rounded shadow-sm">
+            <h5 class="border-bottom pb-2 mb-0">Future Price Details</h5>  
+            <h6>True Current Price: {{ property.property.price }}</h6>  
+            <h6>Growth Rate: {{ property.predictiondata.0.5 }}</h6>
+            <h6>Predicted Current Price: {{ property.predictions.0 }}</h6>  
+            <br>
+            <h5 class="border-bottom pb-2 mb-0">Future Price Predictions</h5>
+            <table class="table">
+                <thead>
+                  <tr>
+                    <th>1-Year</th>
+                    <th>2-Year</th>
+                    <th>3-Year</th>
+                    <th>4-Year</th>
+                    <th>5-Year</th>
+                  </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                    <td>{{ property.predictions.1 }}</td>
+                    <td>{{ property.predictions.2 }}</td>
+                    <td>{{ property.predictions.3 }}</td>
+                    <td>{{ property.predictions.4 }}</td>
+                    <td>{{ property.predictions.5 }}</td>
+                    </tr>
+                </tbody>
+              </table>    
+            <img src="{% url 'propgraph' property.property.id %}" alt="prop_graph"> 
+        </div>
+        <div class="my-3 p-3 bg-body rounded shadow-sm">
+            <h5 class="border-bottom pb-2 mb-0">Risk and Ranking</h5>  
+            <h6>Risk Factor: {{ property.riskfactor }}</h6>  
+            <h6>Ranking Weight: {{ property.rankingweight }}</h6>  
+        </div>
+</div>
+{% endblock %}
